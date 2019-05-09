@@ -59,8 +59,8 @@ namespace BookStore_NTierProject.DAL.Context
                 {
                     entity.ModifiedUserName = identity;
                     entity.ModifiedComputerName = computerName;
-                    entity.CreatedDate = dateTime;
-                    entity.CreatedIP = GetIP;
+                    entity.ModifiedDate = dateTime;
+                    entity.ModifiedIP = GetIP;
                 }
             }
             return base.SaveChanges();
