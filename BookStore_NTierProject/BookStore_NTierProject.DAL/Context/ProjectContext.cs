@@ -18,7 +18,8 @@ namespace BookStore_NTierProject.DAL.Context
     {
         public ProjectContext()
         {
-            Database.Connection.ConnectionString = @"Server=DESKTOP-SC03J1S\SQLEXPRESS;Database=BookStore;uid=sa;pwd=bjk.1403;";
+            //Database.Connection.ConnectionString = @"Server=DESKTOP-SC03J1S\SQLEXPRESS;Database=BookStore;uid=sa;pwd=bjk.1403;";
+            Database.Connection.ConnectionString = "Server=.;Database=BookStore;uid=sa;pwd=1234;";
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

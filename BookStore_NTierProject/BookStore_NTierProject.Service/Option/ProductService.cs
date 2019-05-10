@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BookStore_NTierProject.Service.Option
 {
-    class ProductService : ServiceBase<Product>
+    public class ProductService : ServiceBase<Product>
     {
        
     }

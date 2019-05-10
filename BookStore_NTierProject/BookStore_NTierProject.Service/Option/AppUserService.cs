@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BookStore_NTierProject.Service.Option
 {
-    class AppUserService : ServiceBase<AppUser>
+   public class AppUserService : ServiceBase<AppUser>
     {
         public bool CheckCredentials(string userName, string password)
         {

@@ -20,6 +20,7 @@ namespace BookStore_NTierProject.UI.Areas.Admin.Controllers
         }
         public ActionResult Add()
         {
+            
             return View();
         }
 
