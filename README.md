@@ -1,1 +1,3 @@
-# BookStore_NTierProject
+# BookStore_NTierProject 
+
+Katmanlı Mimari Çalışmam...
