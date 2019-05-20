@@ -13,7 +13,7 @@ namespace BookStore_NTierProject.Map.Option
 
         public CategoryMap()
         {
-            ToTable("dt.Categories");
+            ToTable("dto.Categories");
             Property(x => x.Name).IsOptional();
             Property(x => x.Description).IsOptional();
 

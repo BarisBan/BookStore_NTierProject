@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
+}
+
+@model IEnumerable<BookStore_NTierProject.Model.Option.Product>
+
+<section class="content-header">
+    <ol class="breadcrumb bg-gray-active">
+        <li><a href="/Admin/Home/AdminHomeIndex"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/Admin/Product/Add">Add Product</a></li>
+        <li class="active">Product List</li>
+    </ol>
+</section>
+<br />
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">List of Products</h3>
+                </div>
+                <div class="box-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Author Name</th>
+                                <th>Quantity</th>
+                                <th>Unit Price</th>
+                                <th>Unit In Stock</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <td>@item.Name</td>
+                                <td>@item.Author</td>
+                                <td>@item.Quantity</td>
+                                <td>@item.Price</td>
+                                <td>@item.UnitInStock</td>
+                                <td><a href="/Admin/Product/Update/@item.ID" type="button" class="btn btn-block btn-warning">Update</a></td>
+                                <td><a href="/Admin/Product/Delete/@item.ID" type="button" class="btn btn-block btn-danger">Delete</a></td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <a href="\Admin\Product\Add" class="btn btn-success">Add Product</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+$(function () {
+        $('#example1').DataTable()
+        $('#example2').DataTable({
+            'paging': true,
+            'lengthChange': false,
+            'searching': false,
+            'ordering': true,
+            'info': true,
+            'autoWidth': false
+        })
+    })</script>

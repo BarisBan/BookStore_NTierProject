@@ -15,6 +15,7 @@ namespace BookStore_NTierProject.Map.Option
 
             ToTable("dto.Product");
             Property(x => x.Name).HasMaxLength(50).IsRequired();
+            Property(x => x.Author).HasMaxLength(50).IsRequired();
             Property(x => x.Price).IsRequired();
             Property(x => x.Quantity).IsRequired();
             Property(x => x.UnitInStock).IsRequired();

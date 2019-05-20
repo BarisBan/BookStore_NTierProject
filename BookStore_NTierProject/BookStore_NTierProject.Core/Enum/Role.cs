@@ -11,5 +11,6 @@ namespace BookStore_NTierProject.Core.Enum
         None=0,
         Admin=1,
         Member=2,
+        
     }
 }
