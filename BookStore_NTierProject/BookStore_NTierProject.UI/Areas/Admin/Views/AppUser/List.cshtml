@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
+}
+
+@model IEnumerable<BookStore_NTierProject.Model.Option.AppUser>
+
+<section class="content-header">    
+    <ol class="breadcrumb bg-gray-active">
+        <li><a href="/Admin/Home/AdminHomeIndex"><i class="fa fa-home"></i> Home</a></li>        
+        <li class="active">User List</li>
+    </ol>
+</section>
+<br />
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">User List</h3>
+                </div>
+                <div class="box-body">
+                    <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                        <div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div><div class="row">
+                            <div class="col-sm-12">
+                                <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                                    <thead>
+                                        <tr>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                            <th>Gender</th>
+                                            <th>Update</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@item.FirstName</td>
+                                                <td>@item.LastName</td>
+                                                <td>@item.UserName</td>
+                                                <td>@item.Gender</td>
+                                                <td><a href="/Admin/AppUser/Update/@item.ID" type="button" class="btn btn-block btn-warning">Update</a></td>
+                                                <td><a href="/Admin/AppUser/Delete/@item.ID" type="button" class="btn btn-block btn-danger">Delete</a></td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                                <a href="\Admin\AppUser\Add" class="btn btn-success">Add User</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

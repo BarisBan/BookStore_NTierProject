@@ -21,7 +21,8 @@ namespace BookStore_NTierProject.Map.Option
             Property(x => x.Address).HasColumnName("Address").IsRequired();
             Property(x => x.Gender).HasColumnName("Gender").IsRequired();
             Property(x => x.Role).HasColumnName("Role").IsRequired();
-            Property(x => x.DateTime).HasColumnName("DateTime").IsRequired();
+            Property(x => x.Birthdate).HasColumnType("datetime2").HasColumnName("Birthdate").IsOptional();
+            Property(x => x.DateTime).HasColumnName("DateTime").IsOptional();
         }
 
     }

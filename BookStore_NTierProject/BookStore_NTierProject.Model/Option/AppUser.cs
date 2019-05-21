@@ -15,6 +15,7 @@ namespace BookStore_NTierProject.Model.Option
         public string PhoneNumber { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public DateTime? Birthdate { get; set; }
         public Role Role { get; set; }
         public Gender Gender { get; set; }
         public string Email { get; set; }
