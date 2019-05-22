@@ -11,3 +11,6 @@ Multiple types were found that match the controller named 'Home'. This can happe
 The request for 'Home' has found the following matching controllers:
 BookStore_NTierProject.UI.Areas.Member.Controllers.HomeController
 BookStore_NTierProject.UI.Areas.Admin.Controllers.HomeController
+
+https://stackoverflow.com/questions/7842293/multiple-types-were-found-that-match-the-controller-named-home
+not working why???
