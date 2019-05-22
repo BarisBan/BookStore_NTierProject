@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@*@model IEnumerable<BookStore_NTierProject.Model.Option.AppUser>*@
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -40,7 +42,7 @@
             <!-- Logo -->
             <a href="/Admin/Home/AdminHomeIndex" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini"><b>A</b>LT</span>
+                <span class="logo-mini"><b>B</b>OOK</span>
                 <!-- logo for regular state and mobile devices -->
                 <span class="logo-lg"><b>BookStore</b></span>
             </a>
@@ -48,6 +50,13 @@
             <nav class="navbar navbar-static-top">
                 <!-- Sidebar toggle button-->
 
+                @*@foreach (var item in Model)
+                {
+                <label>@item.FirstName @item.LastName</label>
+                }*@
+
+                <br />
+                <a href="/Login/Logout" style="float:right" class="btn btn-block">Sign Out</a>
 
             </nav>
         </header>

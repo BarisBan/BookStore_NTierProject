@@ -22,16 +22,16 @@ namespace BookStore_NTierProject.UI.Controllers
         // GET: Login
         public ActionResult Login()
         {
-            if(HttpContext.User.Identity.IsAuthenticated)
+            if (HttpContext.User.Identity.IsAuthenticated)
             {
                 AppUser user = _appUserService.FindByUserName(User.Identity.Name);
-                if(user.Role == Core.Enum.Role.Admin)
+                if (user.Role == Core.Enum.Role.Admin)
                 {
-                    return RedirectToAction("AdminHomeIndex", "Home");
+                    return Redirect("/Admin/Home/AdminHomeIndex");
                 }
-                else if(user.Role==Core.Enum.Role.Member)
+                else if (user.Role == Core.Enum.Role.Member)
                 {
-                    return RedirectToAction("MemberHomeIndex", "Home");
+                    return Redirect("/Member/Home/MemberHomeIndex");
                 }
             }
             return View();
