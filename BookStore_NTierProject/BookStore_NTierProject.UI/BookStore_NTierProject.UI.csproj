@@ -122,9 +122,13 @@
     <Compile Include="Areas\Admin\Models\DTO\CategoryDTO.cs" />
     <Compile Include="Areas\Admin\Models\DTO\ProductDTO.cs" />
     <Compile Include="Areas\Admin\Models\VM\AddProductVM.cs" />
+    <Compile Include="Areas\Member\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Member\MemberAreaRegistration.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\VM\LoginVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -153,7 +157,11 @@
     <Content Include="Areas\Admin\Views\AppUser\Add.cshtml" />
     <Content Include="Areas\Admin\Views\AppUser\Update.cshtml" />
     <Content Include="Areas\Admin\Views\AppUser\List.cshtml" />
+    <Content Include="Areas\Member\Views\web.config" />
+    <Content Include="Areas\Member\Views\Shared\_MemberLayoutPage.cshtml" />
+    <Content Include="Areas\Member\Views\Home\MemberHomeIndex.cshtml" />
     <None Include="packages.config" />
+    <Content Include="Views\Login\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -163,9 +171,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Member\Models\" />
     <Folder Include="Content\Images\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BookStore_NTierProject.Core\BookStore_NTierProject.Core.csproj">

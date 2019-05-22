@@ -1,24 +1,24 @@
 ﻿using System.Web.Mvc;
 
-namespace BookStore_NTierProject.UI.Areas.Admin
+namespace BookStore_NTierProject.UI.Areas.Member
 {
-    public class AdminAreaRegistration : AreaRegistration 
+    public class MemberAreaRegistration : AreaRegistration 
     {
         public override string AreaName 
         {
             get 
             {
-                return "Admin";
+                return "Member";
             }
         }
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
-                "Admin_default",
-                "Admin/{controller}/{action}/{id}",
+                "Member_default",
+                "Member/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional },
-                namespaces:new[]{"BookStore_NTierProject.UI.Areas.Admin.Controllers"} // multiple Home Hatası Alıyorum...
+                namespaces:new[]{"BookStore_NTierProject.UI.Areas.Member.Controllers"} // multiple Home hatası alıyorum...
             );
         }
     }
