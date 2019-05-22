@@ -67,7 +67,6 @@ namespace BookStore_NTierProject.UI.Controllers
         {
             FormsAuthentication.SignOut();
             return Redirect("/Login/Login");
-        }
-
+        }       
     }
 }

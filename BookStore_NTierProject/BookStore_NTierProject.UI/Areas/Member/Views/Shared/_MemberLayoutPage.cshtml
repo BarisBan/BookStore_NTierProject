@@ -49,17 +49,35 @@
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top">
                 <!-- Sidebar toggle button-->
-
                 @*@foreach (var item in Model)
                 {
                 <label>@item.FirstName @item.LastName</label>
                 }*@
 
                 <br />
-                <a href="/Login/Logout" style="float:right" class="btn btn-block">Sign Out</a>
-
+                <a href="/Login/Logout" style="float:right" class="btn btn-default">Sign Out</a>
             </nav>
         </header>
+        <br />
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 707px;">
+                <section class="sidebar" style="overflow: hidden; width: auto; height: 707px;">
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu tree" data-widget="tree">
+                        <li class="header">MEMBER PANEL</li>
+                        <li>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-circle"></i>--- </a></li>
+                                <li><a href="#"><i class="fa fa-circle"></i>--- </a></li>
+                                <li><a href="#"><i class="fa fa-circle"></i>--- </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 506.946px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+            </div>
+            <!-- /.sidebar -->
+        </aside>
         <!-- =============================================== -->
         <!-- Left side column. contains the sidebar -->
         <!-- =============================================== -->
